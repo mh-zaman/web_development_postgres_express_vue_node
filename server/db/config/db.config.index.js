@@ -1,6 +1,6 @@
 const { Pool } = require('pg');
 
-const connectionString = `postgresql://postgres:mhzaman999@localhost:5432/node_rest_api_postgresql`;
+const connectionString = `postgresql://${process.env.DATABASE_USER}:${process.env.DATABASE_PASSWORD}@${process.env.DATABASE_HOST}:${process.env.DATABASE_PORT}/${process.env.DATABASE_NAME}`;
 
 
 const ssl = false;
